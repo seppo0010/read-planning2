@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "deploy": "npm run build && touch out/.nojekyll && npx gh-pages -d out -t true",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
