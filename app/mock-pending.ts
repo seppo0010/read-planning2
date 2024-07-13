@@ -1,5 +1,5 @@
 export default {
-  "range": "Pending!A1:Z996",
+  "range": "Pending!A1:Z992",
   "majorDimension": "ROWS",
   "values": [
     [
@@ -7,7 +7,8 @@ export default {
       "Length",
       "Due date",
       "Subject",
-      "Done at"
+      "Read at",
+      "Carded at"
     ],
     [
       "./Clase 1. Introducción DIP. Sujetos/E. Buis. El Derecho Internacional Público. concepto, características y evolución histórica. SGN. Lecciones de DIP",
@@ -15,35 +16,47 @@ export default {
       "2024-07-10",
       "Internacional Público",
       "2024-07-01 10:00",
-      "7/11/2024 7:41:03"
+      "2024-07-13 08:10"
     ],
     [
       "./Clase 1. Introducción DIP. Sujetos/S. Gonzalez Napolitano y M. Fellay. Sujetos del Derecho Internacional",
       "16",
       "2024-07-10",
       "Internacional Público",
-      "2024-07-02 10:00"
+      "2024-07-02 10:00",
+      "2024-07-13 08:10",
+      "2024-07-13 09:57"
     ],
     [
       "./Clase 1. Introducción DIP. Sujetos/CIJ - OC Reparación (1949)",
       "2",
       "2024-07-10",
       "Internacional Público",
-      "2024-07-03 10:00"
+      "2024-07-03 10:00",
+      "2024-07-13 08:10"
     ],
     [
       "./Clase 2. Fuentes/S. Gonzalez Napolitano. Fuentes del DIP",
       "9",
       "2024-07-11",
       "Internacional Público",
-      "2024-07-04 10:00"
+      "2024-07-04 10:00",
+      "2024-07-13 08:28"
+    ],
+    [
+      "./Clase 2. Fuentes/Gonzalez Napolitano - Dereho Interno- Derecho Internacional2",
+      "13",
+      "2024-07-11",
+      "Internacional Público",
+      "2024-07-11 13:38"
     ],
     [
       "./Clase 3. Tratados/napolitano-tratados-capitulo-6",
       "17",
       "2024-07-12",
       "Internacional Público",
-      "2024-07-05 10:00"
+      "2024-07-05 10:00",
+      "2024-07-13 09:07"
     ],
     [
       "./Clase 3. Tratados/napolitano-tratados-capitulo-7",
@@ -60,6 +73,13 @@ export default {
       "2024-07-11 05:48"
     ],
     [
+      "./Clase 3. Tratados/G. Moncayo. R. Vinuesa. H. Gutiérrez Posse. Tratados",
+      "55",
+      "2024-07-12",
+      "Internacional Público",
+      "2024-07-12 17:30"
+    ],
+    [
       "./Clase 4. Costumbre. Principios. Actos Unilaterales/P. Vernet. Costumbre",
       "11",
       "2024-07-15",
@@ -70,13 +90,15 @@ export default {
       "./Clase 4. Costumbre. Principios. Actos Unilaterales/Resolución aprobada por la Asamblea General. Identificación del derecho internacional consuetudinario",
       "5",
       "2024-07-15",
-      "Internacional Público"
+      "Internacional Público",
+      "2024-07-11 13:42"
     ],
     [
       "./Clase 4. Costumbre. Principios. Actos Unilaterales/CIJ - Caso de los Ensayos Nucleares.",
       "3",
       "2024-07-15",
-      "Internacional Público"
+      "Internacional Público",
+      "2024-07-11 15:51"
     ],
     [
       "./Clase 4. Costumbre. Principios. Actos Unilaterales/G. Moncayo. R. Vinuesa. H. Gutiérrez Posse. Actos Unilaterales",
@@ -89,7 +111,8 @@ export default {
       "./Clase 4. Costumbre. Principios. Actos Unilaterales/CIJ - Derecho de asilo",
       "2",
       "2024-07-15",
-      "Internacional Público"
+      "Internacional Público",
+      "2024-07-11 15:51"
     ],
     [
       "./Clase 4. Costumbre. Principios. Actos Unilaterales/G. Moncayo. R. Vinuesa. H. Gutiérrez Posse. Los Principios Generales de Derecho",
@@ -102,13 +125,15 @@ export default {
       "./Clase 4. Costumbre. Principios. Actos Unilaterales/CIJ - Plataforma Continental del Mar del Norte",
       "4",
       "2024-07-15",
-      "Internacional Público"
+      "Internacional Público",
+      "2024-07-13 09:57"
     ],
     [
       "./Clase 4. Costumbre. Principios. Actos Unilaterales/CIJ - Caso Relativo al derecho de paso sobre el territorio de la India",
       "3",
       "2024-07-15",
-      "Internacional Público"
+      "Internacional Público",
+      "2024-07-11 15:51"
     ],
     [
       "./Clase 5. ONU/S. Rojo. ONU",
@@ -119,18 +144,6 @@ export default {
     [
       "./Clase 5. ONU/CIJ - OC Reparación (1949)",
       "2",
-      "2024-07-16",
-      "Internacional Público"
-    ],
-    [
-      "./Clase 5. ONU/Carta de las Naciones Unidas",
-      "31",
-      "2024-07-16",
-      "Internacional Público"
-    ],
-    [
-      "./Clase 5. ONU/Estatuto CIJ",
-      "12",
       "2024-07-16",
       "Internacional Público"
     ],
@@ -165,20 +178,8 @@ export default {
       "Internacional Público"
     ],
     [
-      "./Clase 9. Antártida. Espacio Ultra/Tratado del Rio de la Plata y su Frente Maritimo",
-      "11",
-      "2024-07-23",
-      "Internacional Público"
-    ],
-    [
       "./Clase 9. Antártida. Espacio Ultra/M. Diez de Velasco. Espacio Ultraterrestre",
       "9",
-      "2024-07-23",
-      "Internacional Público"
-    ],
-    [
-      "./Clase 9. Antártida. Espacio Ultra/Tratado Antártico",
-      "8",
       "2024-07-23",
       "Internacional Público"
     ],
@@ -201,12 +202,6 @@ export default {
       "Internacional Público"
     ],
     [
-      "./Clase 11. Ríos. Relaciones Interestatales/Convención de Viena Relaciones Consulares",
-      "28",
-      "2024-07-25",
-      "Internacional Público"
-    ],
-    [
       "./Clase 11. Ríos. Relaciones Interestatales/CIJ - CASO LAGRAND",
       "14",
       "2024-07-25",
@@ -221,12 +216,6 @@ export default {
     [
       "./Clase 11. Ríos. Relaciones Interestatales/M. Diez de Velasco. Agua internacionales",
       "11",
-      "2024-07-25",
-      "Internacional Público"
-    ],
-    [
-      "./Clase 11. Ríos. Relaciones Interestatales/Convención de Viena sobre Relaciones Diplomáticas",
-      "22",
       "2024-07-25",
       "Internacional Público"
     ],
