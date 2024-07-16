@@ -14,11 +14,20 @@ const DUE_DATE = 'Due date'
 const LENGTH = 'Length'
 const READ_AT = 'Read at'
 const CARDED_AT = 'Carded at'
-const TODAY = new Date() // new Date(2024, 6, 15);
+const TODAY = process.env.NODE_ENV === 'development' ? new Date(2024, 6, 15) : new Date();
 const TO_READ = 'Para leer'
 const ALREADY_READ = 'Leído'
 const ALREADY_CARDED = 'Tarjeteado'
 const DATE = 'date'
+
+interface Text {
+  Name: string;
+  Length: number;
+  [DUE_DATE]: string;
+  Subject: string;
+  [READ_AT]: string;
+  [CARDED_AT]: string;
+}
 
 const fetcher = process.env.NODE_ENV === 'development' ? async (_: string) => {
   return mockPending
@@ -35,6 +44,7 @@ export default function Home() {
   const [read, setRead] = useState<dfd.DataFrame | null>(null);
   const [cardedAt, setCardedAt] = useState<dfd.DataFrame | null>(null);
   const [pending, setPending] = useState<dfd.DataFrame | null>(null);
+  const [nextWeek, setNextWeek] = useState<Text[] | null>(null);
 
   useEffect(() => {
     if (!data) return;
@@ -93,14 +103,37 @@ export default function Home() {
 
   useEffect(() => {
     if (!pending) return;
-    pending.print()
+    const df = pending;
+    setNextWeek(dfd.toJSON(df.query(df[READ_AT].isNa().and(df[DUE_DATE].apply((d: Date) => new Date(d).getTime()).lt(TODAY.getTime() + 7 * 24 * 60 * 60 * 1000)))) as Text[]);
   }, [pending])
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <h1>Lectura</h1>
       {(error) && <div>Failed to load</div>}
       {(!data) && <div>Loading</div>}
       <div id="plot_div"></div>
+      {nextWeek && <div>
+        <h2>Próximos textos</h2>
+        <div>
+          <table className="border-collapse border border-slate-400">
+            <thead>
+              <tr>
+                <th className="border border-slate-300 text-left">Nombre</th>
+                <th className="border border-slate-300 text-left">Longitud</th>
+              </tr>
+            </thead>
+            <tbody>
+              {nextWeek.map((text) => (
+                <tr key={text.Name}>
+                  <td className="border border-slate-300">{text.Name}</td>
+                  <td className="border border-slate-300">{text.Length} páginas</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>}
     </main>
   );
 }
