@@ -90,6 +90,7 @@ export default function Home() {
       },
     };
     const new_df = (dfd.concat({ dfList: [due, read, cardedAt], axis: 0 }).sortValues(DATE).fillNa(0) as dfd.DataFrame)
+      .groupby([DATE]).max().rename({ [`${TO_READ}_max`]: TO_READ, [`${ALREADY_READ}_max`]: ALREADY_READ, [`${ALREADY_CARDED}_max`]: ALREADY_CARDED })
       .setIndex({ column: DATE, drop: true })
       .cumSum({ axis: 0 });
     const isFuture = new dfd.Series(new_df.index.map((x) => new Date(x) > TODAY), { columns: ['isFuture'] });
