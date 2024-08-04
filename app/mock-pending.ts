@@ -36,6 +36,14 @@ export default {
       "2024-07-13 08:10"
     ],
     [
+      "./scotti - CAPÍTULO I - EL DERECHO INTERNACIONAL PRIVADO",
+      "2",
+      "2024-07-10",
+      "Internacional Privado",
+      "2024-07-03 10:00",
+      "2024-07-13 08:30"
+    ],
+    [
       "./Clase 2. Fuentes/S. Gonzalez Napolitano. Fuentes del DIP",
       "9",
       "2024-07-11",

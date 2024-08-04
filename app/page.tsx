@@ -19,6 +19,7 @@ const TO_READ = 'Para leer'
 const ALREADY_READ = 'Leído'
 const ALREADY_CARDED = 'Tarjeteado'
 const DATE = 'date'
+const SUBJECT = 'Subject'
 
 interface Text {
   Name: string;
@@ -45,18 +46,32 @@ export default function Home() {
   const [cardedAt, setCardedAt] = useState<dfd.DataFrame | null>(null);
   const [pending, setPending] = useState<dfd.DataFrame | null>(null);
   const [nextWeek, setNextWeek] = useState<Text[] | null>(null);
+  const [subjects, setSubjects] = useState<string[] | null>(null);
+  const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
+  const [df, setDf] = useState<dfd.DataFrame | null>(null);
+  const [allDf, setAllDf] = useState<dfd.DataFrame | null>(null);
 
   useEffect(() => {
-    if (!data) return;
-    const rows = data.values;
-    const df = new dfd.DataFrame(rows.slice(1).map((row: any[]) => row.slice(0, 6)), {
-      columns: rows[0].slice(0, 6),
+    if (!data || !data.values || allDf) return;
+    const values = data.values;
+    const df = new dfd.DataFrame(values.slice(1).map((row: any[]) => row.slice(0, 6)), {
+      columns: values[0].slice(0, 6),
       config: {
         tableMaxColInConsole: 7,
         tableMaxRow: 10
       }
     }).asType(LENGTH, "int32");
+    setSubjects((dfd.toJSON(df.column(SUBJECT).unique()) as [string[]])[0] as string[])
+    setAllDf(df);
+  }, [data, allDf, selectedSubject]);
 
+  useEffect(() => {
+    if (!allDf) return;
+    setDf(selectedSubject === null ? allDf : allDf.query(allDf.column(SUBJECT).apply((v) => v === selectedSubject)))
+  }, [allDf, selectedSubject]);
+
+  useEffect(() => {
+    if (!df) return;
     setPending(df)
     setDue(df
       .loc({ columns: [DUE_DATE, LENGTH] })
@@ -73,7 +88,7 @@ export default function Home() {
       .groupby([CARDED_AT]).sum()
       .rename({ [LENGTH + '_sum']: ALREADY_CARDED, [CARDED_AT]: DATE })
       .dropNa())
-  }, [data, error])
+  }, [df, error])
 
   useEffect(() => {
     if (!due || !read || !cardedAt) return;
@@ -111,6 +126,12 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>Lectura</h1>
+      {subjects !== null && <div>
+        <select onChange={(e) => setSelectedSubject(e.target.value !== '' ? e.target.value : null)}>
+          <option value="" selected={selectedSubject === null}>Todas las materias</option>
+          {subjects.map((s) => <option key={s} value={s} selected={selectedSubject === s}>{s}</option>)}
+        </select>
+      </div>}
       {(error) && <div>Failed to load</div>}
       {(!data) && <div>Loading</div>}
       <div id="plot_div"></div>
