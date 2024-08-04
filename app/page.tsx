@@ -54,7 +54,7 @@ export default function Home() {
   useEffect(() => {
     if (!data || !data.values || allDf) return;
     const values = data.values;
-    const df = new dfd.DataFrame(values.slice(1).map((row: any[]) => row.slice(0, 6)), {
+    const df = new dfd.DataFrame(values.slice(1).map((row: any[]) => row.concat(['', '', '', '', '', '']).slice(0, 6)), {
       columns: values[0].slice(0, 6),
       config: {
         tableMaxColInConsole: 7,
@@ -127,9 +127,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>Lectura</h1>
       {subjects !== null && <div>
-        <select onChange={(e) => setSelectedSubject(e.target.value !== '' ? e.target.value : null)}>
-          <option value="" selected={selectedSubject === null}>Todas las materias</option>
-          {subjects.map((s) => <option key={s} value={s} selected={selectedSubject === s}>{s}</option>)}
+        <select value={selectedSubject ?? ''} onChange={(e) => setSelectedSubject(e.target.value !== '' ? e.target.value : null)}>
+          <option value={''}>Todas las materias</option>
+          {subjects.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
       </div>}
       {(error) && <div>Failed to load</div>}
