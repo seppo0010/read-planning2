@@ -10,11 +10,13 @@ const spreadsheetId = '1S6KMZCx4slqZm0yLF8cKqVmyFQjsO8hfZLebbz2wAsM';
 const sheetNamePending = 'Pending';
 const sheetNameDow = 'Reading time';
 
+const isDev = process.env.NODE_ENV === 'development'
+// const isDev = false
 const DUE_DATE = 'Due date'
 const LENGTH = 'Length'
 const READ_AT = 'Read at'
 const CARDED_AT = 'Carded at'
-const TODAY = process.env.NODE_ENV === 'development' ? new Date(2024, 6, 15) : new Date();
+const TODAY = isDev ? new Date(2024, 6, 15) : new Date();
 const TO_READ = 'Para leer'
 const ALREADY_READ = 'Leído'
 const ALREADY_CARDED = 'Tarjeteado'
@@ -30,7 +32,7 @@ interface Text {
   [CARDED_AT]: string;
 }
 
-const fetcher = process.env.NODE_ENV === 'development' ? async (_: string) => {
+const fetcher = isDev ? async (_: string) => {
   return mockPending
 } : (url: string) => fetch(url).then((r) => r.json())
 
@@ -120,7 +122,7 @@ export default function Home() {
   useEffect(() => {
     if (!pending) return;
     const df = pending;
-    setNextWeek(dfd.toJSON(df.query(df[READ_AT].isNa().and(df[DUE_DATE].apply((d: Date) => new Date(d).getTime()).lt(TODAY.getTime() + 7 * 24 * 60 * 60 * 1000)))) as Text[]);
+    setNextWeek(dfd.toJSON(df.query(df[READ_AT].apply((x: any) => x === '').and(df[DUE_DATE].apply((d: Date) => new Date(d).getTime()).lt(TODAY.getTime() + 7 * 24 * 60 * 60 * 1000)))) as Text[]);
   }, [pending])
 
   return (
