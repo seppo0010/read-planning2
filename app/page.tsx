@@ -10,8 +10,8 @@ const spreadsheetId = '1S6KMZCx4slqZm0yLF8cKqVmyFQjsO8hfZLebbz2wAsM';
 const sheetNamePending = 'Pending';
 const sheetNameDow = 'Reading time';
 
-const isDev = process.env.NODE_ENV === 'development'
-// const isDev = false
+// const isDev = process.env.NODE_ENV === 'development'
+const isDev = false
 const DUE_DATE = 'Due date'
 const LENGTH = 'Length'
 const READ_AT = 'Read at'
@@ -155,6 +155,12 @@ export default function Home() {
                 </tr>
               ))}
             </tbody>
+            <tfoot>
+              <tr>
+                <th className="border border-slate-300 text-left">Total</th>
+                <th className="border border-slate-300">{nextWeek.map((x) => x.Length).reduce((partialSum, a) => partialSum + a, 0)} páginas</th>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>}
