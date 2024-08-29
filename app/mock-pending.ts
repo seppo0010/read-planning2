@@ -8,6 +8,7 @@ export default {
       "Due date",
       "Subject",
       "Read at",
+      "Planned at",
       "Carded at"
     ],
     [
@@ -16,6 +17,7 @@ export default {
       "2024-07-10",
       "Internacional Público",
       "2024-07-01 10:00",
+      "",
       "2024-07-13 08:10"
     ],
     [
@@ -25,6 +27,7 @@ export default {
       "Internacional Público",
       "2024-07-02 10:00",
       "2024-07-13 08:10",
+      "",
       "2024-07-13 09:57"
     ],
     [
@@ -33,6 +36,7 @@ export default {
       "2024-07-10",
       "Internacional Público",
       "2024-07-03 10:00",
+      "",
       "2024-07-13 08:10"
     ],
     [
@@ -41,6 +45,7 @@ export default {
       "2024-07-10",
       "Internacional Privado",
       "2024-07-03 10:00",
+      "",
       "2024-07-13 08:30",
       ""
     ],
@@ -50,6 +55,7 @@ export default {
       "2024-07-11",
       "Internacional Público",
       "2024-07-04 10:00",
+      "",
       "2024-07-13 08:28",
       ""
     ],
@@ -60,6 +66,7 @@ export default {
       "Internacional Público",
       "2024-07-11 13:38",
       "",
+      "",
       ""
     ],
     [
@@ -69,6 +76,7 @@ export default {
       "Internacional Público",
       "2024-07-05 10:00",
       "2024-07-13 09:07",
+      "",
       ""
     ],
     [
@@ -77,6 +85,7 @@ export default {
       "2024-07-12",
       "Internacional Público",
       "2024-07-11 05:48",
+      "",
       "",
       ""
     ],
@@ -87,6 +96,7 @@ export default {
       "Internacional Público",
       "2024-07-11 05:48",
       "",
+      "",
       ""
     ],
     [
@@ -95,6 +105,7 @@ export default {
       "2024-07-12",
       "Internacional Público",
       "2024-07-12 17:30",
+      "",
       "",
       ""
     ],
@@ -105,6 +116,7 @@ export default {
       "Internacional Público",
       "2024-07-11 05:48",
       "",
+      "",
       ""
     ],
     [
@@ -113,6 +125,7 @@ export default {
       "2024-07-15",
       "Internacional Público",
       "2024-07-11 13:42",
+      "",
       "",
       ""
     ],
@@ -123,6 +136,7 @@ export default {
       "Internacional Público",
       "2024-07-11 15:51",
       "",
+      "",
       ""
     ],
     [
@@ -131,6 +145,7 @@ export default {
       "2024-07-15",
       "Internacional Público",
       "2024-07-11 05:48",
+      "",
       "",
       ""
     ],
@@ -141,6 +156,7 @@ export default {
       "Internacional Público",
       "2024-07-11 15:51",
       "",
+      "",
       ""
     ],
     [
@@ -149,6 +165,7 @@ export default {
       "2024-07-15",
       "Internacional Público",
       "2024-07-11 05:48",
+      "",
       "",
       ""
     ],
@@ -159,6 +176,7 @@ export default {
       "Internacional Público",
       "2024-07-13 09:57",
       "",
+      "",
       ""
     ],
     [
@@ -168,6 +186,7 @@ export default {
       "Internacional Público",
       "2024-07-11 15:51",
       "",
+      "",
       ""
     ],
     [
@@ -175,6 +194,7 @@ export default {
       "12",
       "2024-07-16",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -186,6 +206,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -193,6 +214,7 @@ export default {
       "3",
       "2024-07-17",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -204,6 +226,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -211,6 +234,7 @@ export default {
       "14",
       "2024-07-17",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -222,6 +246,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -229,6 +254,7 @@ export default {
       "10",
       "2024-07-23",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -240,6 +266,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -247,6 +274,7 @@ export default {
       "24",
       "2024-07-24",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -258,6 +286,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -265,6 +294,7 @@ export default {
       "9",
       "2024-07-25",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -276,6 +306,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -283,6 +314,7 @@ export default {
       "3",
       "2024-07-25",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -294,6 +326,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -301,6 +334,7 @@ export default {
       "10",
       "2024-07-25",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -312,6 +346,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -319,6 +354,7 @@ export default {
       "20",
       "2024-07-26",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -330,6 +366,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -337,6 +374,7 @@ export default {
       "6",
       "2024-07-26",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -348,6 +386,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -355,6 +394,7 @@ export default {
       "5",
       "2024-07-26",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -366,6 +406,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -373,6 +414,7 @@ export default {
       "32",
       "2024-07-30",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -384,6 +426,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -391,6 +434,7 @@ export default {
       "7",
       "2024-07-31",
       "Internacional Público",
+      "",
       "",
       "",
       ""
@@ -402,6 +446,7 @@ export default {
       "Internacional Público",
       "",
       "",
+      "",
       ""
     ],
     [
@@ -409,6 +454,7 @@ export default {
       "6",
       "2024-07-31",
       "Internacional Público",
+      "",
       "",
       "",
       ""

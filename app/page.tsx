@@ -56,10 +56,10 @@ export default function Home() {
   useEffect(() => {
     if (!data || !data.values || allDf) return;
     const values = data.values;
-    const df = new dfd.DataFrame(values.slice(1).map((row: any[]) => row.concat(['', '', '', '', '', '']).slice(0, 6)), {
-      columns: values[0].slice(0, 6),
+    const df = new dfd.DataFrame(values.slice(1).map((row: any[]) => row.concat(['', '', '', '', '', '']).slice(0, 7)), {
+      columns: values[0].slice(0, 7),
       config: {
-        tableMaxColInConsole: 7,
+        tableMaxColInConsole: 8,
         tableMaxRow: 10
       }
     }).asType(LENGTH, "int32");
